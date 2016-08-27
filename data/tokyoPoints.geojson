@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "name": "スタート", "WR_man": null }, "geometry": { "type": "Point", "coordinates": [ 139.692285935211117, 35.689667350761546 ] } },
+{ "type": "Feature", "properties": { "id": 2, "name": "５キロ地点", "WR_man": "00:14:16" }, "geometry": { "type": "Point", "coordinates": [ 139.740292908392433, 35.697656706444661 ] } },
+{ "type": "Feature", "properties": { "id": 3, "name": "10キロ地点", "WR_man": "00:28:37" }, "geometry": { "type": "Point", "coordinates": [ 139.774206333565445, 35.683289590483092 ] } },
+{ "type": "Feature", "properties": { "id": 4, "name": "15キロ地点", "WR_man": "00:43:17" }, "geometry": { "type": "Point", "coordinates": [ 139.796953196809369, 35.709580269228191 ] } },
+{ "type": "Feature", "properties": { "id": 5, "name": "20キロ地点", "WR_man": "00:58:10" }, "geometry": { "type": "Point", "coordinates": [ 139.795417079303149, 35.67317850874246 ] } },
+{ "type": "Feature", "properties": { "id": 6, "name": "中間点", "WR_man": "01:01:24" }, "geometry": { "type": "Point", "coordinates": [ 139.797582608853446, 35.671133254407785 ] } },
+{ "type": "Feature", "properties": { "id": 7, "name": "25キロ地点", "WR_man": "01:12:39" }, "geometry": { "type": "Point", "coordinates": [ 139.791024398806172, 35.701420543480168 ] } },
+{ "type": "Feature", "properties": { "id": 8, "name": "30キロ地点", "WR_man": "01:27:13" }, "geometry": { "type": "Point", "coordinates": [ 139.767436850839175, 35.673425223021056 ] } },
+{ "type": "Feature", "properties": { "id": 9, "name": "35キロ地点", "WR_man": "01:42:07" }, "geometry": { "type": "Point", "coordinates": [ 139.741666167251452, 35.64177879683276 ] } },
+{ "type": "Feature", "properties": { "id": 10, "name": "40キロ地点", "WR_man": "01:56:49" }, "geometry": { "type": "Point", "coordinates": [ 139.754492089023387, 35.667825695222383 ] } },
+{ "type": "Feature", "properties": { "id": 11, "name": "ゴール", "WR_man": "02:03:05" }, "geometry": { "type": "Point", "coordinates": [ 139.760984276605257, 35.678452306031154 ] } }
+]
+}

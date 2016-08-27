@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<<!--== 以下の２行がLeafletを外部から読み込む ==-->
+<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+<script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+<title>Leaflet骨格コード</title>
+</head>
+<style>
+#map1 { height: 400px; }
+h2 {font-size:24px;margin:2% 5%;}
+</style>
+<body>
+<div class="page">
+	<h2>Leaflet骨格コード</h2>
+	<div id="map1"></div>
+</div>
+<script>
+// ブラウザがこのHTMLを完全に読み込んだら実行するよう、コードを登録する
+window.onload = function(){
+	// ここで登場する「L」は、読み込んだLeaflet.jsの中に定義されている
+	// 北緯35.671230,東経139.754448を中心にした、ズームレベル16の地図をつくる
+	var map_object = L.map("map1").setView([35.671230, 139.754448], 14);
+
+	// Leafletは単なるプログラム・ライブラリで、地図データまでは準備してくれません
+	// ここでは、MapBoxの地図サービス(月間5万PVまで無料)を使います
+	// 各自、自分のアカウントを作り、ユーザーIDを取得してください
+	// MapBoxのユーザーID
+	var user_id = "pk.eyJ1Ijoic29uZ2JvZ29uZyIsImEiOiJRRHZKbW1rIn0.GkAtUDV0JvT43uJBuufp8w";
+
+	// 背景地図を追加します
+	// このURLも、依存するサービス(MapBox)が指定するものです
+	var HaikeiMap = L.tileLayer(
+		'https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=' + user_id,
+		{
+			attribution: '地図データ:OpenStreetMap',
+			maxZoom: 18
+		});
+	HaikeiMap.addTo(map_object);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+<script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+<title>Leaflet骨格コード</title>
+</head>
+<style>
+#map1 { height: 400px; }
+h2 {font-size:24px;margin:2% 5%;}
+</style>
+<body>
+<div class="page">
+	<h2>APIを使う：マーカーの追加</h2>
+	<div id="map1"></div>
+</div>
+<script>
+window.onload = function(){
+	var map_object = L.map("map1").setView([35.671230, 139.754448], 14);
+	var user_id = "pk.eyJ1Ijoic29uZ2JvZ29uZyIsImEiOiJRRHZKbW1rIn0.GkAtUDV0JvT43uJBuufp8w";
+	var HaikeiMap = L.tileLayer(
+		'https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=' + user_id,
+		{
+			attribution: '地図データ:OpenStreetMap',
+			maxZoom: 18
+		});
+	HaikeiMap.addTo(map_object);
+	// ライブラリのAPIに従い、マーカーを作る
+	var marker = L.marker([35.671230, 139.754448]);
+	marker.addTo(map_object);
+	// 吹き出しを追加する方法もAPIで指定されている
+	// Leafletがこの機能を用意していないなら、事実上、吹き出しはつかえない
+	marker.bindPopup("<b>日本記者クラブ</b><br>");
+}
+</script>
+</body>
+</html>
